@@ -57,7 +57,7 @@ body {
     box-shadow: none;
 }
 
-#app {
+.app {
     background: var(--color-bg-black);
     height: 48rem;
     width: 24rem;
@@ -76,6 +76,38 @@ h2,  h4 {
 
 h2 {
     font-size: 2rem;
+}
+
+.note {
+    background: var(--color-primary);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    color: var(--color-white);
+}
+
+.note:hover {
+    opacity: 0.9;
+}
+
+.note:nth-child(3) {
+    grid-column: 1/3;
+}
+
+.note:nth-child(4) {
+    grid-row: 3/5;
+}
+
+.note:nth-child(7) {
+    grid-column: 1/3;
+}
+
+.note p {
+    font-size: 0.8rem;
+    opacity: 0.85;
 }
 
 `;
