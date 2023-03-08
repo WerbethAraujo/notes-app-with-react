@@ -2,13 +2,11 @@ import { Link } from 'react-router-dom';
 import { CiSearch } from 'react-icons/ci';
 import { BsPlusLg } from 'react-icons/bs';
 
-import notes from '../../dummy_notes';
-
 import NoteItem from '../../components/NoteItem';
 
 import { Header, NotesContainer } from './styles';
 
-function Notes() {
+function Notes({ notes }) {
   return (
     <>
       <Header>
