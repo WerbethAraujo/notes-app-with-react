@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 import { CiSearch } from 'react-icons/ci';
 import { BsPlusLg } from 'react-icons/bs';
 
@@ -19,7 +20,7 @@ function Notes({ notes }) {
           <NoteItem key={note.id} note={note} />
         ))}
       </NotesContainer>
-      <Link className='btn add__btn'>
+      <Link to='/create-note' className='btn add__btn'>
         <BsPlusLg />
       </Link>
     </>

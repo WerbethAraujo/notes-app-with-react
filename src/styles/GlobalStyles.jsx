@@ -52,6 +52,13 @@ body {
     background: var(--color-primary);
 }
 
+.btn.add__btn{
+    position: absolute;
+    bottom: 4rem;
+    right: 2rem;
+    padding: 1rem;
+}
+
 .btn:hover {
     cursor: pointer;
     box-shadow: none;
