@@ -1,17 +1,29 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 
+import useCreateDate from '../../hooks/useCreateDate';
 import { Header, Form } from './styles';
 
-function CreateNote() {
+import { v4 as uuid } from 'uuid';
+
+function CreateNote({ setNotes }) {
   const [title, setTitle] = useState('');
   const [details, setDetails] = useState('');
+  const navigate = useNavigate();
+
+  const date = useCreateDate();
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    console.log(title, details);
+    if (title && details) {
+      const note = { id: uuid(), title, details, date };
+
+      setNotes((prevNotes) => [note, ...prevNotes]);
+    }
+
+    navigate('/');
   }
   return (
     <>
