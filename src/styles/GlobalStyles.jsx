@@ -54,7 +54,7 @@ body {
 
 .btn.add__btn{
     position: absolute;
-    bottom: 4rem;
+    bottom: 2rem;
     right: 2rem;
     padding: 1rem;
 }
@@ -94,6 +94,13 @@ h2 {
     cursor: pointer;
     transition: all 300ms ease;
     color: var(--color-white);
+}
+
+.empty__notes {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .note:hover {

@@ -36,6 +36,16 @@ function EditNote({ notes, setNotes }) {
     navigate('/');
   }
 
+  function handleDeleteNote() {
+    if (window.confirm('Tem certeza que deseja apagar essa nota?')) {
+      const notesFilterad = notes.filter((note) => note.id !== id);
+
+      setNotes(notesFilterad);
+
+      navigate('/');
+    }
+  }
+
   return (
     <>
       <Header>
@@ -45,7 +55,7 @@ function EditNote({ notes, setNotes }) {
         <button onClick={handleEditform} className='btn lg primary'>
           Salvar
         </button>
-        <button className='btn lg danger'>
+        <button className='btn lg danger' onClick={handleDeleteNote}>
           <RiDeleteBin6Line />
         </button>
       </Header>
